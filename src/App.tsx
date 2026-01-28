@@ -17,9 +17,6 @@ function App() {
         </div>
         <div>
           <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
         </div>
         <button
           className="counter"
@@ -31,6 +28,49 @@ function App() {
 
       <div className="ticks"></div>
 
+      {/* --- AQUÍ EMPIEZA LA NUEVA SECCIÓN COBERTURA DIGITAL --- */}
+      <section id="cobertura-digital" style={{ padding: '2rem 0', textAlign: 'center' }}>
+        <h2>Cobertura Digital</h2>
+        
+        {/* Contenedor flexible para alinear los logos */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+          
+          {/* 1. LOGO PRINCIPAL: NARRADOR EN VIVO */}
+          <div className="narrador-box">
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#646cff' }}>Narrador en Vivo</h3>
+            <img 
+              src="https://i.postimg.cc/N09JQZHc/Diseno-sin-titulo-20260128-120557-0000.png" 
+              alt="Logo Narrador en Vivo" 
+              width="180" 
+              style={{ borderRadius: '12px', border: '2px solid #646cff' }}
+            />
+          </div>
+
+          {/* 2. LOS 3 COLABORADORES (Espacios reservados) */}
+          {/* Cuando tengas los links de las otras imagenes, cámbialos en el 'src' abajo */}
+          
+          <div className="colab-box">
+            <h3 style={{ fontSize: '1rem', marginBottom: '10px' }}>Colaborador 1</h3>
+            <img src={viteLogo} alt="Pendiente" width="100" style={{ opacity: 0.5 }} />
+          </div>
+
+          <div className="colab-box">
+            <h3 style={{ fontSize: '1rem', marginBottom: '10px' }}>Colaborador 2</h3>
+            <img src={viteLogo} alt="Pendiente" width="100" style={{ opacity: 0.5 }} />
+          </div>
+
+          <div className="colab-box">
+            <h3 style={{ fontSize: '1rem', marginBottom: '10px' }}>Colaborador 3</h3>
+            <img src={viteLogo} alt="Pendiente" width="100" style={{ opacity: 0.5 }} />
+          </div>
+
+        </div>
+      </section>
+      {/* --- FIN DE SECCIÓN COBERTURA DIGITAL --- */}
+
+
+      <div className="ticks"></div>
+
       <section id="next-steps">
         <div id="docs">
           <svg className="icon" role="presentation" aria-hidden="true">
@@ -38,80 +78,14 @@ function App() {
           </svg>
           <h2>Documentation</h2>
           <p>Your questions, answered</p>
+           {/* ... Resto del código original ... */}
           <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
+             {/* ... */}
           </ul>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
+        {/* ... (El resto del footer se queda igual) ... */}
       </section>
-
+      
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>

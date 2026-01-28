@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from './components/Layout';
 import AIChatDrawer from './components/AIChatDrawer';
@@ -231,6 +230,72 @@ const Founders: React.FC = () => (
   </section>
 );
 
+/* --- SECCIÓN ACTUALIZADA: COBERTURA DIGITAL --- */
+const DigitalCoverage: React.FC = () => (
+  <section id="cobertura" className="max-w-xl mx-auto px-6 py-16 scroll-mt-24 border-t border-white/5">
+    <div className="flex flex-col gap-2 mb-10 text-center">
+      <h4 className="text-primary text-[10px] font-black uppercase tracking-[0.4em]">Transmisión</h4>
+      <h2 className="text-3xl font-black leading-tight tracking-tight uppercase italic">Cobertura Digital</h2>
+    </div>
+
+    {/* GRID DE ALIADOS PRINCIPALES */}
+    <div className="flex flex-col gap-6">
+      
+      {/* 1. Aliado: NARRADOR EN VIVO */}
+      <div className="p-6 bg-gradient-to-br from-surface-dark to-black border border-primary/20 rounded-[2rem] flex flex-col items-center text-center gap-4 relative overflow-hidden group">
+        <div className="absolute top-0 right-0 p-4 opacity-10">
+          <span className="material-symbols-outlined text-6xl text-primary">mic</span>
+        </div>
+        <h3 className="text-primary text-[10px] font-black uppercase tracking-widest mb-1">Narración Oficial</h3>
+        
+        <div className="w-56 h-auto rounded-xl overflow-hidden border-2 border-primary/30 shadow-[0_0_30px_rgba(255,107,0,0.1)] group-hover:scale-105 transition-transform duration-500 bg-black">
+          <img
+            src="https://i.postimg.cc/N09JQZHc/Diseno-sin-titulo-20260128-120557-0000.png"
+            alt="Narrador en Vivo"
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <h4 className="text-xl font-black italic uppercase text-white mt-2">Narrador en Vivo</h4>
+      </div>
+
+      {/* 2. Aliado: BARBAKANZLER (YOUTUBE / TIKTOK) */}
+      <div className="p-6 bg-gradient-to-bl from-surface-dark to-black border border-red-500/20 rounded-[2rem] flex flex-col items-center text-center gap-4 relative overflow-hidden group">
+        <div className="absolute top-0 left-0 p-4 opacity-10">
+          <span className="material-symbols-outlined text-6xl text-red-500">smart_display</span>
+        </div>
+        <h3 className="text-red-500 text-[10px] font-black uppercase tracking-widest mb-1">Transmisión & Streaming</h3>
+        
+        {/* Foto de perfil redonda */}
+        <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-red-600/30 shadow-[0_0_30px_rgba(220,38,38,0.2)] group-hover:scale-105 transition-transform duration-500 bg-black">
+          <img
+            src="https://i.postimg.cc/RZ9XnGD5/channels4-profile.jpg"
+            alt="Barbakanzler"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div>
+           <h4 className="text-xl font-black italic uppercase text-white leading-none">@Barbakanzler</h4>
+           <p className="text-[9px] text-gray-500 font-bold uppercase tracking-widest mt-1">Host Oficial</p>
+        </div>
+
+        {/* Botones de Redes */}
+        <div className="flex gap-3 mt-1 w-full justify-center">
+            <a href="https://www.youtube.com/@barbakanzler" target="_blank" className="flex-1 max-w-[120px] py-2.5 bg-red-600 hover:bg-red-700 text-white text-[10px] font-black uppercase tracking-wider rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-red-900/20">
+                <span className="material-symbols-outlined text-base">play_arrow</span>
+                YouTube
+            </a>
+            <a href="https://www.tiktok.com/@barbakanzler" target="_blank" className="flex-1 max-w-[120px] py-2.5 bg-black border border-white/10 hover:bg-white/5 text-white text-[10px] font-black uppercase tracking-wider rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2">
+                TikTok
+            </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+);
+/* --- FIN DE SECCIÓN ACTUALIZADA --- */
+
 const Footer: React.FC = () => (
   <footer className="bg-black px-6 py-16">
     <div className="max-w-xl mx-auto flex flex-col items-center text-center gap-10">
@@ -266,6 +331,7 @@ const App: React.FC = () => {
       <LeagueStructure />
       <Vision />
       <Founders />
+      <DigitalCoverage /> 
       <Footer />
       <AIChatDrawer />
     </Layout>
