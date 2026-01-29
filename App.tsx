@@ -238,35 +238,56 @@ const DigitalCoverage: React.FC = () => (
       <h2 className="text-3xl font-black leading-tight tracking-tight uppercase italic">Cobertura Digital</h2>
     </div>
 
-    {/* GRID DE ALIADOS PRINCIPALES */}
+    {/* LISTA DE CANALES Y ALIADOS */}
     <div className="flex flex-col gap-6">
+
+      {/* 1. CANAL OFICIAL (LOGO CORREGIDO) */}
+      <div className="p-6 bg-gradient-to-br from-surface-dark to-black border border-primary/40 rounded-[2rem] flex flex-col items-center text-center gap-4 relative overflow-hidden group shadow-[0_0_50px_rgba(255,107,0,0.15)]">
+         <div className="absolute top-0 right-0 p-4 opacity-10">
+            <span className="material-symbols-outlined text-6xl text-primary">live_tv</span>
+         </div>
+         <h3 className="text-primary text-[10px] font-black uppercase tracking-widest mb-1">Medio Oficial</h3>
+         
+         {/* Logo Liga: Se eliminó el padding y se usó object-cover */}
+         <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/50 shadow-[0_0_30px_rgba(255,107,0,0.3)] bg-black">
+            <img
+              src="https://i.postimg.cc/FKgNmFpv/Whats_App_Image_2026_01_25_at_12_07_36_AM.jpg"
+              alt="LMB Oficial"
+              // CAMBIO AQUÍ: object-cover para rellenar el círculo
+              className="w-full h-full object-cover"
+            />
+         </div>
+         
+         <div>
+            <h4 className="text-2xl font-black italic uppercase text-white leading-none">LMB TV</h4>
+             <p className="text-[9px] text-gray-400 font-bold uppercase tracking-widest mt-1">Canal Oficial de la Liga</p>
+         </div>
+
+         <a href="https://youtube.com/@ligametropolitanadelejeeste?si=2_UZ291lEiZ1029H" target="_blank" className="w-full max-w-[200px] py-3 bg-white text-black hover:bg-gray-200 text-[10px] font-black uppercase tracking-wider rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2 shadow-xl">
+             <span className="material-symbols-outlined text-lg">play_circle</span>
+             Suscribirse
+         </a>
+      </div>
       
-      {/* 1. Aliado: NARRADOR EN VIVO */}
-      <div className="p-6 bg-gradient-to-br from-surface-dark to-black border border-primary/20 rounded-[2rem] flex flex-col items-center text-center gap-4 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 p-4 opacity-10">
-          <span className="material-symbols-outlined text-6xl text-primary">mic</span>
-        </div>
-        <h3 className="text-primary text-[10px] font-black uppercase tracking-widest mb-1">Narración Oficial</h3>
+      {/* 2. Aliado: NARRADOR EN VIVO */}
+      <div className="p-6 bg-surface-dark border border-white/5 rounded-[2rem] flex flex-col items-center text-center gap-4 relative overflow-hidden group">
+        <h3 className="text-gray-500 text-[10px] font-black uppercase tracking-widest mb-1">Narración Oficial</h3>
         
-        <div className="w-56 h-auto rounded-xl overflow-hidden border-2 border-primary/30 shadow-[0_0_30px_rgba(255,107,0,0.1)] group-hover:scale-105 transition-transform duration-500 bg-black">
+        <div className="w-24 h-auto rounded-xl overflow-hidden border-2 border-white/10 group-hover:border-primary/50 transition-colors bg-black">
           <img
             src="https://i.postimg.cc/N09JQZHc/Diseno-sin-titulo-20260128-120557-0000.png"
             alt="Narrador en Vivo"
             className="w-full h-full object-contain"
           />
         </div>
-        <h4 className="text-xl font-black italic uppercase text-white mt-2">Narrador en Vivo</h4>
+        <h4 className="text-lg font-black italic uppercase text-white mt-2">Narrador en Vivo</h4>
       </div>
 
-      {/* 2. Aliado: BARBAKANZLER (YOUTUBE / TIKTOK) */}
-      <div className="p-6 bg-gradient-to-bl from-surface-dark to-black border border-red-500/20 rounded-[2rem] flex flex-col items-center text-center gap-4 relative overflow-hidden group">
-        <div className="absolute top-0 left-0 p-4 opacity-10">
-          <span className="material-symbols-outlined text-6xl text-red-500">smart_display</span>
-        </div>
-        <h3 className="text-red-500 text-[10px] font-black uppercase tracking-widest mb-1">Transmisión & Streaming</h3>
+      {/* 3. Aliado: BARBAKANZLER */}
+      <div className="p-6 bg-surface-dark border border-white/5 rounded-[2rem] flex flex-col items-center text-center gap-4 relative overflow-hidden group">
+        <h3 className="text-gray-500 text-[10px] font-black uppercase tracking-widest mb-1">Transmisión & Streaming</h3>
         
-        {/* Foto de perfil redonda */}
-        <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-red-600/30 shadow-[0_0_30px_rgba(220,38,38,0.2)] group-hover:scale-105 transition-transform duration-500 bg-black">
+        <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-red-500/50 transition-colors bg-black">
           <img
             src="https://i.postimg.cc/RZ9XnGD5/channels4-profile.jpg"
             alt="Barbakanzler"
@@ -275,17 +296,15 @@ const DigitalCoverage: React.FC = () => (
         </div>
         
         <div>
-           <h4 className="text-xl font-black italic uppercase text-white leading-none">@Barbakanzler</h4>
+           <h4 className="text-lg font-black italic uppercase text-white leading-none">@Barbakanzler</h4>
            <p className="text-[9px] text-gray-500 font-bold uppercase tracking-widest mt-1">Host Oficial</p>
         </div>
 
-        {/* Botones de Redes */}
         <div className="flex gap-3 mt-1 w-full justify-center">
-            <a href="https://www.youtube.com/@barbakanzler" target="_blank" className="flex-1 max-w-[120px] py-2.5 bg-red-600 hover:bg-red-700 text-white text-[10px] font-black uppercase tracking-wider rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-red-900/20">
-                <span className="material-symbols-outlined text-base">play_arrow</span>
+            <a href="https://www.youtube.com/@barbakanzler" target="_blank" className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-[9px] font-black uppercase tracking-wider rounded-lg transition-all active:scale-95 flex items-center justify-center gap-2">
                 YouTube
             </a>
-            <a href="https://www.tiktok.com/@barbakanzler" target="_blank" className="flex-1 max-w-[120px] py-2.5 bg-black border border-white/10 hover:bg-white/5 text-white text-[10px] font-black uppercase tracking-wider rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2">
+            <a href="https://www.tiktok.com/@barbakanzler" target="_blank" className="px-4 py-2 bg-black border border-white/10 hover:bg-white/5 text-white text-[9px] font-black uppercase tracking-wider rounded-lg transition-all active:scale-95 flex items-center justify-center gap-2">
                 TikTok
             </a>
         </div>
